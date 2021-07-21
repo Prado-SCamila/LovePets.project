@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export default class Atendimentos extends Component{
+export default class Veterinario extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -39,7 +39,7 @@ export default class Atendimentos extends Component{
   render(){
     return(
       <div>
-        <h1>Gerenciamento de Atendimentos</h1>
+        <h1>Página dos Veterinários</h1>
 
         <section>
           <h2>Lista de atendimentos</h2>

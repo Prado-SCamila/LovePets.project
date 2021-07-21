@@ -14,6 +14,8 @@ export default class Login extends Component{
   efetuaLogin = (event) => {
     event.preventDefault();
 
+    //vai consumir os dados (email e senha) da api para fazer o login. E o token será gerado. Passar o header desse token em todas as páginas para acessar
+    //a  API
     axios.post('http://localhost:5000/api/login', {
       email : this.state.email,
       senha : this.state.senha

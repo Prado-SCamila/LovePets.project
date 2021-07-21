@@ -8,6 +8,8 @@ import './index.css';
 
 import App from './pages/home/App';
 import Atendimentos from './pages/atendimentos/atendimentos';
+import Veterinario from './pages/veterinario/vets.js';
+import Pet from './pages/pet/pet.js';
 import Login from './pages/login/login';
 import NotFound from './pages/notFound/notFound';
 
@@ -19,14 +21,36 @@ import reportWebVitals from './reportWebVitals';
       // 2 > 3 ? Sim : Não
       // resposta : Não
 
+
+     //constante de permissao para adms
 const PermissaoAdm = ({ component : Component }) => (
   <Route 
     render = { props => 
       usuarioAutenticado() && parseJwt().role === "1" ?
-      <Component {...props} /> :
-      <Redirect to="/login" />
+      <Component {...props} /> : <Redirect to="/login" />
     }
   />
+)
+
+     //constante de permissao para veterinarios
+const PermissaoVet = ({ component : Component}) => (
+  <Route
+  render = {props =>
+  usuarioAutenticado() && parseJwt().role === "2" ?
+  <Component { ...props}/> : <Redirect to ="/Veterinario"/>
+}
+/>
+)
+
+
+     //constante de permissao para pets (donos)
+const PermissaoPet = ({ component: Component})=> (
+  <Route
+  render = {props =>
+    usuarioAutenticado() && parseJwt().role === "3" ?
+    <Component {...props}/>: <Redirect to = "Pet"/>
+  }
+/>
 )
 
 const routing = (
@@ -35,6 +59,8 @@ const routing = (
       <Switch>
         <Route exact path="/" component={App} />
         <PermissaoAdm path="/atendimentos" component={Atendimentos} />
+        <PermissaoVet path ="veterinario" component={Veterinario}/>
+        <PermissaoPet path = "pet" component ={Pet}/>
         <Route path="/login" component={Login} />
         <Route exact path="/notfound" component={NotFound} />
         <Redirect to="/notfound" />
