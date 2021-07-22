@@ -39,6 +39,18 @@ namespace senai_lovePets_webApi.Controllers
                 return BadRequest(erro);
             }
         }
-
+        [Authorize(Roles = "1")]
+        [HttpGet]
+        public IActionResult ListarTodos()
+        {
+            try
+            {
+                return Ok(_petRepository.ListarTodos());
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
     }
 }

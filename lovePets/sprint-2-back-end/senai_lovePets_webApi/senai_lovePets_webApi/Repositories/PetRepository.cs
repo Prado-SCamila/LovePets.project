@@ -8,36 +8,36 @@ using System.Threading.Tasks;
 
 namespace senai_lovePets_webApi.Repositories
 {
-        public class PetRepository : IPetRepository
+    public class PetRepository : IPetRepository
+    {
+        lovePetsContext ctx = new lovePetsContext();
+
+        public Pet AtualizarDados(int idPet, Pet petAtualizado)
         {
-            lovePetsContext ctx = new lovePetsContext();
+            throw new NotImplementedException();
+        }
 
-            public Pet AtualizarDados(int idPet, Pet petAtualizado)
-            {
-                throw new NotImplementedException();
-            }
-
-            public Pet BuscarPorId(int idPet)
-            {
-                throw new NotImplementedException();
-            }
+        public Pet BuscarPorId(int idPet)
+        {
+            throw new NotImplementedException();
+        }
 
 
-            public void Cadastrar(Pet novoPet)
-            {
-                ctx.Pets.Add(novoPet);
+        public void Cadastrar(Pet novoPet)
+        {
+            ctx.Pets.Add(novoPet);
 
-                ctx.SaveChanges();
-            }
+        }
 
-            public void Deletar(int idPet)
-            {
-                throw new NotImplementedException();
-            }
 
-            public List<Pet> ListarTodos()
-            {
-                throw new NotImplementedException();
-            }
+        public void Deletar(int idPet)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Pet> ListarTodos()
+        {
+            throw new NotImplementedException();
         }
     }
+}

@@ -8,8 +8,8 @@ import './index.css';
 
 import App from './pages/home/App';
 import Atendimentos from './pages/atendimentos/atendimentos';
-import Veterinario from './pages/veterinario/vets.js';
-import Pet from './pages/pet/pet.js';
+import Veterinario from './pages/veterinario/veterinario';
+import Pet from './pages/pet/pet';
 import Login from './pages/login/login';
 import NotFound from './pages/notFound/notFound';
 
@@ -37,7 +37,7 @@ const PermissaoVet = ({ component : Component}) => (
   <Route
   render = {props =>
   usuarioAutenticado() && parseJwt().role === "2" ?
-  <Component { ...props}/> : <Redirect to ="/Veterinario"/>
+  <Component { ...props}/> : <Redirect to ="/veterinario"/>
 }
 />
 )
@@ -48,7 +48,7 @@ const PermissaoPet = ({ component: Component})=> (
   <Route
   render = {props =>
     usuarioAutenticado() && parseJwt().role === "3" ?
-    <Component {...props}/>: <Redirect to = "Pet"/>
+    <Component {...props}/>: <Redirect to = "pet"/>
   }
 />
 )

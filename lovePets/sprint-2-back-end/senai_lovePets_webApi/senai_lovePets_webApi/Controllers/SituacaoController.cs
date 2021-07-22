@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using senai_lovePets_webApi.Domains;
+using senai_lovePets_webApi.Interfaces;
 using senai_lovePets_webApi.Repositories;
 using System;
 using System.Collections.Generic;
@@ -10,34 +10,34 @@ using System.Threading.Tasks;
 
 namespace senai_lovePets_webApi.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class ClinicaController : ControllerBase
+    public class SituacaoController : ControllerBase
+
     {
-        private ClinicaRepository  _clinicaRepository { get; set; }
 
-        public ClinicaController()
+        private ISituacaoRepository _situacaoRepository { get; set; }
+
+
+        public SituacaoController()
         {
-            _clinicaRepository = new ClinicaRepository();
+            _situacaoRepository = new SituacaoRepository();
         }
+       
 
-        [HttpPost]
         [Authorize(Roles = "1")]
-        public IActionResult Cadastrar(Clinica novaClinica)
+        [HttpGet]
+        public IActionResult ListarTodas()
         {
             try
             {
-                _clinicaRepository.Cadastrar(novaClinica);
-
-                return StatusCode(201);
+                return Ok(_situacaoRepository.ListarTodas());
             }
             catch (Exception erro)
             {
                 return BadRequest(erro);
             }
         }
-
-       
-
     }
 }

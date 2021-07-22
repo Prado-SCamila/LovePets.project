@@ -12,7 +12,7 @@ export default class Pet extends Component{
   buscarAtendimentos = () => {
     console.log('Esta função traz todos os atendimentos.');
 
-    fetch('http://localhost:5000/api/atendimentos', {
+    fetch('http://localhost:5000/api/pet', {
       headers : {
         'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login')
       }

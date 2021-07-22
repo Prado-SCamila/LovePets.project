@@ -18,9 +18,9 @@ namespace senai_lovePets_webApi.Repositories
             throw new NotImplementedException();
         }
 
-        public Clinica BuscarPorId(int id)
+        public Clinica BuscarPorId(int idClinica)
         {
-            throw new NotImplementedException();
+            return ctx.Clinicas.Find(idClinica);
         }
 
         public void Cadastrar(Clinica novaClinica)
@@ -30,7 +30,7 @@ namespace senai_lovePets_webApi.Repositories
             ctx.SaveChanges();
         }
 
-        public void Deletar()
+        public void Deletar(int idClinica)
         {
             throw new NotImplementedException();
         }

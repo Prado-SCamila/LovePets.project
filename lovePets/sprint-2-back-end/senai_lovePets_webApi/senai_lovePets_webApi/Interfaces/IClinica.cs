@@ -12,9 +12,9 @@ namespace senai_lovePets_webApi.Interfaces
 
         Clinica AtualizarClinica(int id, Clinica clinicaAtual);
 
-        Clinica BuscarPorId(int id);
+        Clinica BuscarPorId(int idClinica);
 
 
-        void Deletar();
+        void Deletar(int idClinica);
     }
 }

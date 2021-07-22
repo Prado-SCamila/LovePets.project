@@ -8,20 +8,13 @@ using System.Threading.Tasks;
 
 namespace senai_lovePets_webApi.Repositories
 {
-    public class UserRepository : IUser
+    public class VeterinarioRepository : IVeterinarioRepository
     {
         lovePetsContext ctx = new lovePetsContext();
 
-        public void Cadastrar(int idUsuario, Usuario novoUsuario)
+        public List<Veterinario> ListarTodos()
         {
-            ctx.Usuarios.Add(novoUsuario);
-
-            ctx.SaveChanges();
-        }
-
-        public void Deletar(int idUsuario)
-        {
-            throw new NotImplementedException();
+            return ctx.Veterinarios.ToList();
         }
     }
 }

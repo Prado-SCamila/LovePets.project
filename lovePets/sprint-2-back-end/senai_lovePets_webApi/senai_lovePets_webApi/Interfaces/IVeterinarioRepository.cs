@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace senai_lovePets_webApi.Interfaces
 {
-    interface IUser
+    interface IVeterinarioRepository
     {
-        public void Cadastrar(int idUsuario, Usuario novoUsuario);
-
-
-
-        public void Deletar(int idUsuario);
-      
+        List<Veterinario> ListarTodos();
     }
 }

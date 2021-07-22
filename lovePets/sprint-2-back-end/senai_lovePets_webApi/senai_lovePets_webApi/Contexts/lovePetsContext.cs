@@ -35,8 +35,9 @@ namespace senai_lovePets_webApi.Contexts
             if (!optionsBuilder.IsConfigured)
            {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-               optionsBuilder.UseSqlServer("Data Source=DESKTOP-DESKTOP-840P8H6; initial catalog=lovePets_manha; user Id=sa; pwd=miladori23;");
-          }
+               //optionsBuilder.UseSqlServer("Data Source=DESKTOP-DESKTOP-840P8H6; initial catalog=lovePets_manha; user Id=sa; pwd=miladori23;");
+                optionsBuilder.UseSqlServer("Data Source=LAB08DES1159998\\SQLEXPRESS; initial catalog=lovePets_manha; user Id=sa; pwd=sa132;");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

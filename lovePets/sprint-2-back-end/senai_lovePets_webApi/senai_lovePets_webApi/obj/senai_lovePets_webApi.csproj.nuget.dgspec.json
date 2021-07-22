@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prado\\OneDrive\\Área de Trabalho\\LovePets-Senai\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj": {}
+    "C:\\Users\\fic\\Desktop\\lovePets-Camila\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prado\\OneDrive\\Área de Trabalho\\LovePets-Senai\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj": {
+    "C:\\Users\\fic\\Desktop\\lovePets-Camila\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prado\\OneDrive\\Área de Trabalho\\LovePets-Senai\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
+        "projectUniqueName": "C:\\Users\\fic\\Desktop\\lovePets-Camila\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
         "projectName": "senai_lovePets_webApi",
-        "projectPath": "C:\\Users\\prado\\OneDrive\\Área de Trabalho\\LovePets-Senai\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
-        "packagesPath": "C:\\Users\\prado\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prado\\OneDrive\\Área de Trabalho\\LovePets-Senai\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\obj\\",
+        "projectPath": "C:\\Users\\fic\\Desktop\\lovePets-Camila\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
+        "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fic\\Desktop\\lovePets-Camila\\LovePets.project\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\prado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
