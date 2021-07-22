@@ -15,5 +15,9 @@ namespace senai_lovePets_webApi.Interfaces
         /// <param name="senha">O valor da senha digitada pelo usuário</param>
         /// <returns>Um usuário encontrado</returns>
         Usuario BuscarPorEmailSenha(string email, string senha);
+
+        void Cadastrar(int idUsuario, Usuario novoUsuario);
+
+        void Deletar(int idUsuario);
     }
 }

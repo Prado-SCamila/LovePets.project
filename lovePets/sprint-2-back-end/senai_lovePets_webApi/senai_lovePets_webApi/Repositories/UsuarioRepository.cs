@@ -22,5 +22,15 @@ namespace senai_lovePets_webApi.Repositories
         {
             return ctx.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
         }
+
+       public void Cadastrar(int idUsuario, Usuario novoUsuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deletar(int idUsuario)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

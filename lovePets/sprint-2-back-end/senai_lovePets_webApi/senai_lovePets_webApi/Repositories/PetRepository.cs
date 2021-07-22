@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 namespace senai_lovePets_webApi.Repositories
 {
-    namespace senai_lovePets_webApi.Repositories
-    {
         public class PetRepository : IPetRepository
         {
             lovePetsContext ctx = new lovePetsContext();
